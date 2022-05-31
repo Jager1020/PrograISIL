@@ -21,7 +21,18 @@
         (por que sólo son 6 letras)
     </pre>
     <script>
-        
+        let nombre, num, largo
+        num = 0
+        largo = 0
+
+        nombre = prompt("Ingrese el nombre: ")
+        num = parseInt(prompt("Ingrese el numero: "))
+        largo = parseInt(nombre.length)
+
+        for (var i = 0; i <= num; i++) {
+          largo = largo - 1
+          document.write(largo)
+        }
     </script>
 </body>
 </html>
