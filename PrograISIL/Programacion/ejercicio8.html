@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Desarrolla un app que te pida 5 notas de un alumno para el curso de matematica
+        si el promedio es mayor a 13 saldra una imagen diciendo ud aprobo, si el promedio 
+        es menor a 13 saldra una imagen diciendo ud. jalo
+    </pre>
+    <script>
+        var nota1, nota2, nota3, nota4, nota5
+       
+        nota1 = parseInt(prompt("Ingrese la nota 1 del alumno: "))
+        nota2 = parseInt(prompt("Ingrese la nota 2 del alumno: "))
+        nota3 = parseInt(prompt("Ingrese la nota 3 del alumno: "))
+        nota4 = parseInt(prompt("Ingrese la nota 4 del alumno: "))
+        nota5 = parseInt(prompt("Ingrese la nota 5 del alumno: "))
+
+        promedio = 0
+
+        promedio=parseInt((nota1+nota2+nota3+nota4+nota5)/5)
+        
+        if (promedio >= 13) {
+            document.write("Ud aprobo el curso con: " + promedio)
+        }
+        else {
+            document.write("Ud reprobo el curso: " + promedio)
+        }
+    </script>
+</body>
+</html>

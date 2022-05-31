@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ejercicios</title>
+    </head>
+    <body>
+       <pre>
+          Se le pide una serie de numeros solo si ingresa 0 se termina
+          de pedir los numeros y te muestra los numeros ingresados y la suma
+          ejemplo:
+            Ingresas 6,7,8,9,2,3,4,5,8,7,41,0
+
+            Los numeros son: 6+7+8+9=30
+       </pre>
+       <script>
+           var numero ,suma,lista
+
+           suma=0
+           lista=""
+            
+
+           for (var x=1;x<=10000;x++){
+              numero=parseInt(prompt("Ingrese un numero"))
+              suma=suma+numero
+              if(x==1){
+                 lista=lista+numero
+              }
+              if (numero==0){
+                 break;
+              } 
+              if (x!=1){
+                 lista=lista+"+"+numero  
+              }
+           }
+           document.write("EL valor de toda la suma es: "+lista+"="+suma )
+           
+          
+          
+       </script>              
+        
+    </body>
+</html>

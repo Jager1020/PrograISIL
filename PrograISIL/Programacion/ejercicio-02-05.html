@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Se le pide desarrollar una aplicacion que te diga su el numero es multiplo de 3,
+        si es asi debe decirte con que numero es multiplo de 3, si no es asi debe salir un
+        mensaje diciendote que el numero no es multiplo de 3.
+    </pre>
+    <script>
+        var numero, multiplo
+
+        numero = parseInt(prompt("Ingrese un mumero"))
+
+        if (numero%3==0) {
+            multiplo = numero/3
+            document.write("El numero es multiplo de 3 con el numero: "+multiplo)
+        }else {
+            document.write("El numero no es multiplo de 3")
+        }
+
+    </script>
+</body>
+</html>

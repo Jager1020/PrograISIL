@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ejercicios</title>
+    </head>
+    <body>
+       <pre>
+          2.	Elabore un script que te pida un número del 1 al 100 y te dé como resultado la siguiente serie:
+   
+                Ejemplo. Si le das 7 sale:
+                1	1      1          3
+                2	4      5          11
+                3	9      14         26
+                4	16    30         50
+                5	25    55         85
+                6	36    90        131
+                7	49    139      195
+
+       </pre>
+       <script>
+           var numero,cadena,cuadrado,suma1,suma2
+           cuadrado=0
+           cadena=""
+           suma1=0
+           suma2=0
+
+           numero=parseInt(prompt("Ingrese un numero"))
+
+           for (var x=1;x<=numero;x++){
+               cuadrado=Math.pow(x,2)
+               suma1=suma1+cuadrado
+               suma2=x+cuadrado+suma1
+               cadena=cadena+x+"    "+cuadrado+"      "+suma1+"       "+suma2+"<br>"
+           }
+           document.write(cadena)
+          
+       </script>              
+        
+    </body>
+</html>

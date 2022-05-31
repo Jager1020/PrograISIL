@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        4.Desarrolle una aplicación que te pida la edad de un empleado, la categoría,  el nombre, el área en la que trabaja, la profesión, hijos  y las horas trabajadas en el último mes.
+        a.El hombre gana 40 x hora de trabajo si es categoría A y 50 si es categoría B
+        b.Si el empleado trabajó más de 160 horas al mes gana un bono de 200
+        c.Si el empleado tiene más de 40 años gana un bono de 300
+        d.Si el empleado trabaja en el área de Sistemas gana un bono de 500 las demás áreas ganan 100
+        e.Si el empleado es ingeniero gana un bono de 500, las demás profesiones ganan 200
+        f.Si el empleado tiene hijos gana 500 soles mas por hijo.
+
+        Ejemplo de resultado:
+        EL empleado Alfredo Pardon, trabajó 165 de categoría A
+        Sueldo Base: 165*40=6600
+        El empleado tiene 41 años=6600+300=6900
+        El empleado trabaja en el área de sistemas: 6900+500=7400
+        El empleado es administrador: 7400+200=7600 
+        El empleado tiene 2 hijos: 7600+2*500=8600
+
+        EL suelfo final del empleado es : 8600 nuevos soles.
+
+    </pre>
+    <script>
+       var numero,primos,marca
+            numero=parseInt(prompt("Ingrese la cantidad de numeros primos a mostrar"))
+            primos=0
+            marca=0
+            for(var x=2;x<=100;x++){
+               document.write(x+"<br>")
+               for(var y=1;y<=x;y++){
+                  if(x%y==0){
+                    marca=1
+                  }
+               }
+               if (marca==0){
+                  document.write("El numero "+x+ " es numero primo")
+               } 
+               marca=0
+
+            }
+        
+    </script>
+</body>
+</html>

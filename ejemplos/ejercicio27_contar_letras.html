@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ejercicios</title>
+    </head>
+    <body>
+       <pre>
+          Desarrollar una APP que te cuente cuantas vocales "a" hay en un texto
+       </pre>
+       <script>
+          var contar,texto,largo,letras
+          contar=0
+          letras=0
+
+          texto=prompt("Ingrse el texto a analizar")
+          largo=texto.length 
+
+          for(var x=0;x<=largo-1 ;x++){
+             if(texto.charAt(x)=="a"){
+                contar=contar+1
+             }
+             letras=letras+1
+          }
+          
+          document.write("El largo del texto es:"+letras+" y la cantidad de vocales es:"+contar)
+         
+          
+       </script>              
+        
+    </body>
+</html>

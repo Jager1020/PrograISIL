@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>En una empresa tenemos un area de TI que ha creado un sistema en las puertas para poder entrar,
+        los usuarios de SISTEMAS solo pueden entrar con el password "TI1234"
+        los usuarios de contabilidad solo pueden entrar con "conta1234"
+        cualquier otro caso 
+    </pre>
+    <script>
+        var usuario, password
+        acceso = 1
+
+        usuario = prompt("Ingrese el usuario")
+        password = prompt("Ingrese el password")
+
+        if (usuario == "SISTEMAS") {
+            if (password == "TI1234") {
+                document.write("<img src='sistemas.jpg'>")
+            }
+            else {
+                acceso = 0
+            }
+        }
+        else if (usuario == "contabilidad") {
+            if (password == "conta1234") {
+                document.write("<img src='contabilidad.jpg'>")
+            }
+            else {
+                acceso = 0
+            }
+        }
+        else {
+            acceso = 0
+        }
+        if (acceso == 0) {
+            document.write("ACCESO DENEGADO")
+        }
+    </script>
+</body>
+</html>

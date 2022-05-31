@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        1.Realiza un script que te pida una cadena de texto, y que solo te imprima como salida las vocales que hay en el, a manera de resumen. (4 puntos)
+
+        Ejemplo:
+        Se ingresa: “La historia de mi familia es larga y extensa”
+        a  7
+        e..4
+        i..5
+        o..1
+        u..0
+    </pre>
+    <script>
+        let frase, cont_a, cont_e, cont_i, cont_o, cont_u
+
+        cont_a = 0
+        cont_e = 0
+        cont_i = 0
+        cont_o = 0
+        cont_u = 0
+
+        frase = prompt("Ingrese la frase u oracion")
+        largo = frase.length
+
+        for (let x=0; x<=largo; x++) {
+            if (frase.charAt(x)== "a") {
+                cont_a = cont_a+1
+            }
+            if (frase.charAt(x)== "e") {
+                cont_e = cont_e+1
+            }
+            if (frase.charAt(x)== "i") {
+                cont_i = cont_i+1
+            }
+            if (frase.charAt(x)== "o") {
+                cont_o = cont_o+1
+            }
+            if (frase.charAt(x)== "u") {
+                cont_u = cont_u+1
+            }
+        }
+        
+        document.write("Se ingreso: " + frase + "<br>")
+        document.write("a.." + cont_a + "<br>")
+        document.write("e.." + cont_e + "<br>")
+        document.write("i.." + cont_i + "<br>")
+        document.write("o.." + cont_o + "<br>")
+        document.write("u.." + cont_u)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Desarrolle una app que te diga que cuando tu presiones f5, se ejecuta auto,aticamente una formula entre tres dados, si la suma es menor que 14 gana la casa,  15 gana el usuario 100, 16 gana el usuario 500
+    </pre>
+    <script>
+        var dado1, dado2, dado3, suma, gana, bono
+
+        dado1 = 0
+        dado2 = 0
+        dado3 = 0
+        suma = 0
+
+        
+
+        gana = true
+      
+        
+        
+        while (gana) {
+            dado1 = parseInt(Math.random() * 6 + 1)
+            dado2 = parseInt(Math.random() * 6 + 1)
+            dado3 = parseInt(Math.random() * 6 + 1)
+
+            suma = dado1 + dado2 + dado3
+            if (suma>14) {
+                document.write("El señor saco: " + dado1 + dado2 + dado3 + " y gano 500")
+                gana = false
+            }else {
+                document.write("El señor saco: " + dado1 + dado2 + dado3 + "y perdio 100" + "<br>")
+            }
+        }
+
+    </script>
+</body>
+</html>

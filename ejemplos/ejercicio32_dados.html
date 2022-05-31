@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ejercicios</title>
+    </head>
+    <body>
+       <pre>
+          Desarrollar una APP que te diga que cuando tu presionas f5, se ejcute automticamente una formula
+          entre tres daados, si la suma es menor a 14 gana la casa,mayor a eso gana 100
+       </pre>
+       <script>
+           var dado1,dado2,dado3,suma,bono
+           dado1=0
+           dado2=0
+           dado3=0
+           suma=0
+           dado1=parseInt(Math.random()*6+1)
+           dado2=parseInt(Math.random()*6+1)
+           dado3=parseInt(Math.random()*6+1)
+           
+           bono=1
+         
+           suma=dado1+dado2+dado3
+           if (suma>14){
+              
+              document.write("El señor sacó:"+dado1+","+dado2+","+dado3)
+           }else{
+                document.write("El señor pierde :"+100)
+            }
+          
+       </script>              
+        
+    </body>
+</html>

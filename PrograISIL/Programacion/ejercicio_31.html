@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Desarrolle una app que te pida usuario y password SISTEMAS SISTEMAS, si no ingresas esas credemciales no ingresas al sistemas
+    </pre>
+    <script>
+        let usuario, password, llave
+        llave = true
+
+        while (llave) {
+            usuario = prompt("Ingrese el usuario")
+            usuario = usuario.toUpperCase()
+            password = prompt("Ingrese el password: ")
+            password = password.toUpperCase()
+            if (usuario == "SISTEMAS" && password == "SISTEMAS") {
+                llave = false
+            }
+            
+        }
+        document.write("Ya se encuentra dentro de la empresa")
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Desarrolle una app que te pida datos hasta que te ingrese un multiplo de 7
+    </pre>
+    <script>
+        var numero, otro_num
+        otro_num = 0
+
+        while (numero%7 != 0) {
+            numero = parseInt(prompt("Ingrese un numero: "))
+            otro_num = numero/7
+        }
+        document.write("ud ingreso un multiplo de 7 con el numero: " + otro_num)
+
+    </script>
+</body>
+</html>

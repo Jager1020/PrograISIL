@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        4.Se ingresa el nombre y apellidos del empleado, cantidad de horas trabajadas al mes, la categoría del empleado, y la cantidad de años trabajando en la empresa. 
+        Según la categoría del empleado: A – S/ 80 la hora, B – S/ 60 la hora, C – S/ 40 la hora, cualquier otra categoría S/ 30 la hora. 
+        La empresa otorgará las utilidades dependiendo de la cantidad de años del trabajador en la empresa: Para 20 años o más 5 veces el sueldo, De 10 a 19 años en la empresa 4 veces el sueldo, Para los demás será 3 veces el sueldo. Hallar y mostrar todos los conceptos que recibirá el empleado en su boleta. (6 puntos)
+
+        Ejemplo.
+        EL empleado Alfredo Pardón 
+        Categoría : “A”   80 la hora
+        El empleado trabajó el último mes 48 horas
+        Cantidad de años trabajados:15 (x4)
+        El empleado recibirá por concepto de utilidades. S/. 15360
+    </pre>
+    <script>
+
+        let nombre, cat, cant_horas, pre_hora, cant_años, sueldo, utilidades, mult
+
+        pre_hora = 0
+        cant_horas
+        cant_años = 0
+        sueldo = 0
+        utilidades = 0
+
+        nombre = prompt("Ingrese el nombre del empleado: ")
+        cat = prompt("Ingrese la categoria, 'A', 'B', 'C', u otra: ")
+        cat.toUpperCase()
+        cant_horas = parseInt(prompt("Ingrese la cantidad de horas trabajadas al mes: "))
+        cant_años = parseInt(prompt("Ingrese la cantidad de años que lleva trabajando en la empresa: "))
+
+        if (cat == "A") {
+            pre_hora = 80
+        } else if(cat == "B") {
+            pre_hora = 60
+        }else if (cat == "C") {
+            pre_hora = 40
+        }else {
+            pre_hora = 30
+        }
+
+        sueldo = cant_horas * pre_hora
+
+        if (cant_años >= 20) {
+            mult = "(x5)"
+            utilidades = sueldo * 5
+        } else if(10 <= cant_años <= 19) {
+            mult = "(x4)"
+            utilidades = sueldo * 4
+        }else {
+            mult = "(x3)"
+            utilidades = sueldo * 3
+        }
+
+        document.write("El empleado " + nombre + "<br>")
+        document.write("Categoria: " + "'" + cat + "' " + pre_hora + " la hora" + "<br>")
+        document.write("El empleado trabajo el ultimo mes " + cant_horas + " horas" + "<br>")
+        document.write("Cantidad de años trabajdos: " + cant_años + " " + mult + "<br>")
+        document.write("El empleado recibira por concepto de utilidades: s/." + utilidades)
+       
+
+    </script>
+</body>
+</html>

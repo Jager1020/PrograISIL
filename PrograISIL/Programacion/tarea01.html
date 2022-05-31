@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">         
+ <head>              
+ <meta charset="UTF-8">            
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">             
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+       <title>Evaluación</title>
+   
+</head>    
+<body>        
+<pre> 
+			  	   GRUPO #3
+		INTEGRANTES			   PARTICIPACION AL
+ 		QUISPE RUIZ ANDRES SEBASTIAN		100%
+  		VILLAFUERTE CORDOVA EDGARD RONALDO	100%
+  		AVILA RAMOS ANTHONY JIMY		100%
+  		LEGUA GAONA JUAN MANUEL			100%
+		ROJAS VENTOCILLA YANINA AMALIA		100%
+  		TELLO DEL CARPIO CESAR ALFONSO	    NO SE CONECTO
+
+ 4.Desarrolle una aplicación que te pida la edad de un empleado, la categoría,  el nombre, 
+  el área en la que trabaja, la profesión, hijos  y las horas trabajadas en el último mes.
+
+a.El hombre gana 40 x hora de trabajo si es categoría A y 50 si es categoría B
+b.Si el empleado trabajó más de 160 horas al mes gana un bono de 200
+c.Si el empleado tiene más de 40 años gana un bono de 300
+d.Si el empleado trabaja en el área de Sistemas gana un bono de 500 las demás áreas ganan 100
+e.Si el empleado es ingeniero gana un bono de 500, las demás profesiones ganan 200
+f.Si el empleado tiene hijos gana 500 soles mas por hijo.
+
+Ejemplo de resultado:
+EL empleado Alfredo Pardon, trabajó 165 de categoría A
+Sueldo Base: 165*40=6600
+El empleado tiene 41 años=6600+300=6900
+El empleado trabaja en el área de sistemas: 6900+500=7400
+El empleado es administrador: 7400+200=7600
+El empleado tiene 2 hijos: 7600+2*500=8600
+EL sueldo final del empleado es : 8600 nuevos soles
+ 
+</pre>
+   
+<script>
+  
+      
+ var nombre,edad,cat,area,profesion,hijos,canth,horas,sxc,bono,sueldo,sueldo1,sueldo2,sueldo3,sueldo4,sueldo5
+ nombre=prompt("Ingrese el nombre del trabajador:")
+ horas=parseInt(prompt("Ingrese las horas trabajadas este mes:")) 
+ cat=prompt("Ingrese la categoria (A),(B)")  
+ cat=cat.toUpperCase()     
+ edad=parseInt(prompt("ingrese la edad:"))
+ area=prompt("Ingrese el area que trabaja:")
+ area=area.toLowerCase()
+ profesion=prompt("Ingrese la profesion")
+ profesion=profesion.toLowerCase()      
+ hijos=prompt("¿Tiene hijos?(SI), (NO):") 
+ hijos=hijos.toUpperCase() 
+  
+ 	if(hijos=="SI"){
+   	canth=parseInt(prompt("¿Cuantos hijos tiene?")) 
+   	}else{      
+  	hijos=0    
+        } 
+ 	
+  	document.write("El empleado "+nombre+", trabajó "+horas+" horas en la categoria "+cat+"<br>")
+       
+	switch(cat){            
+	case "A":             
+   	sxc=40             
+   	break;
+        case "B":
+        sxc=50
+	break;
+	}       
+  	sueldo=horas*sxc        
+ 	bono=0
+    
+      		if (horas>=160){           
+   		bono=200         
+     		}else if(horas<160){      
+                bono=0    
+           	}   
+       		sueldo1=sueldo+bono      
+      		document.write("Sueldo Base: "+horas+"*"+sxc+"="+sueldo+"<br>")
+        	document.write("El empleado trabajo "+horas+" horas este mes= "+sueldo+"+"+bono+"="+sueldo1+"<br>")
+      
+       			if(edad>=40){      
+ 		        bono=300      
+		        }else if(edad<40){       
+                	bono=0      
+              		}     
+             		sueldo2=sueldo1+bono
+          		document.write("El empleado tiene "+edad+" años= "+sueldo1+"+"+bono+"="+sueldo2+"<br>")
+
+            			if(area=="sistemas"){         
+               			bono=500         
+           			}else if(area!="sistemas"){      
+                    		 bono=100            
+                   		}          
+                  		sueldo3=sueldo2+bono          
+                		document.write("El empleado trabaja en el area de "+area+"= "+sueldo2+"+"+bono+"="+sueldo3+"<br>")
+
+                            
+                 			if(profesion=="ingeniero"){
+                           		bono=500             
+                 			}else if(profesion!="ingeniero"){         
+                          		bono=200              
+                        		}
+                                        sueldo4=sueldo3+bono           
+                       			document.write("El empleado es "+profesion+"= "+sueldo3+"+"+bono+"="+sueldo4+"<br>")                                          
+                      				
+						if(hijos=="SI"){
+                          			if(canth>0){               
+                           			bono=500                                                  
+                          			sueldo5=sueldo4+canth*bono                                                  
+                          			document.write("El empleado tiene "+canth+" hijos= "+sueldo4+"+"+canth+"*"+bono+"="+sueldo5+"<br>") 
+                          			document.write("El sueldo final del empleado es="+sueldo5)  
+                    				 }else{
+                        			hijos=0
+                          			} 
+                        			}
+          
+                         			if(hijos==0){
+                            			document.write("El empleado no tiene hijos="+sueldo4+"<br>") 
+                            			document.write("El sueldo final del empleado es="+sueldo4)  
+                           			}
+                           
+       
+                           
+ 
+</script>
+
+</body>
+
+</html>

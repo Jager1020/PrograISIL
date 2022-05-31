@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ejercicios</title>
+    </head>
+    <body>
+       <pre>
+          Se le pide una app que muestre todos los numeros comprendidos
+          entre dos numeros solicitados
+       </pre>
+       <script>
+          var numero1,numero2,lista
+          lista=""
+
+          numero1=parseInt(prompt("Ingrese el primer numero"))
+          numero2=parseInt(prompt("Ingrese el segundo numero"))
+ 
+          if(numero1<=numero2){
+             for(var x=numero1;x<=numero2;x++){
+                if (x==numero2){
+                  lista=lista+x 
+                }else{
+                   lista=lista+x+","
+                 }
+             }
+          }else{
+              for(var x=numero2;x<=numero1;x++){
+                if (x==numero1){
+                  lista=lista+x 
+                }else{
+                   lista=lista+x+","
+                 }
+             }
+           }
+      
+          document.write(lista) 
+         
+          
+       </script>              
+        
+    </body>
+</html>

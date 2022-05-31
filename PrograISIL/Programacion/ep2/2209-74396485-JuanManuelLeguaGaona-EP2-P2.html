@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        2.Realiza un script que te pida una cadena de texto y al salir te saque cada letra separada por guión. (4 puntos)
+        Se ingresa:
+        Excelente
+        Saldrá:
+        E-x-c-e-l-e-n-t-e 
+    </pre>
+    <script>
+        
+        let palabra, largo
+
+        palabra = prompt("Ingrese una palabra:")
+        largo = palabra.length
+        letra = ""
+        lista = ""
+
+        for (let x=0; x<=largo; x++) {
+            letra = palabra.charAt(x)
+            
+            if (x != largo) {
+                lista = lista + "-"
+        }
+        lista = lista + letra 
+    }
+        document.write("Se ingresa: " + "<br>" + palabra + "<br>")
+        document.write("Saldra: " + "<br>")
+        document.write(lista)
+
+    </script>
+</body>
+</html>

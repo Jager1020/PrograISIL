@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        3.Realiza un script que te pida un número y esta te imprima la serie Fibonacci hasta esa cantidad de números ingresados (6 puntos).
+        Ejemplo.
+        Se ingresa; 8
+        Sale:
+        1,1,2,3,5,8,13,21,34
+    </pre>
+    <script>
+        
+        let num, serie
+
+        num_s = 0
+        serie = 0
+
+        num = parseInt(prompt("Ingrese la cantidad de numero: "))
+
+        for (x=0; x<=num; x++) {
+            serie = serie + 1
+            document.write(serie + ",")
+        }
+
+        
+
+    </script>
+</body>
+</html>

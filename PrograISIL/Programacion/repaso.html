@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var nombre, horas, cat, sueldo, sxc
+        nombre = prompt("Ingrese su nombre y apellido: ")
+        horas = parseInt(prompt("Ingrese las horas trabajadas: "))
+        cat = prompt("Ingrese la categoria del empleado (A), (B), (C)")
+        cat = cat.toUpperCase()
+
+        switch (cat) {
+            case "A":
+                sxc = 50
+                break;
+            case "B":
+                sxc = 60
+                break;
+            case "C":
+                sxc = 70
+                break;
+        }
+
+        sueldo = horas * sxc
+        if (horas >= 30 && horas < 40) {
+            bono = 100
+        }else if (horas >= 40 && horas < 50) {
+            bono = 200
+        }else if (horas >= 50) {
+            bono = 400
+        }
+
+        sueldo = sueldo + bono
+
+        document.write("Sr: " + nombre + ", su sueldo es: " + sueldo + " soles")
+
+    </script>
+</body>
+</html>

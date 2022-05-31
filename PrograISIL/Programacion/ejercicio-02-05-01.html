@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Se le pide 2 numeros y eveluar: si son iguales, debes mostra la suma y la 
+        multiplicacion entre ellos y si son diferentes mostrar el mensaje son diferentes.
+        Considerar que si el primer numero ingresado es mayor, debes mostrar la diferencia 
+        entre ellos y su multiplicacion
+    </pre>
+    <script>
+
+        var numero1, numero2, suma, multi, dif
+
+        numero1 = parseInt(prompt("Ingrese el primer numero: "))
+        numero2 = parseInt(prompt("Ingrese el segundo numero: "))
+
+        if (numero1==numero2) {
+            suma = numero1 + numero2
+            multi = numero1 * numero2
+            document.write("Los numeros son iguales: "+"<br>"+"la suma es: "+suma+"<br>"+"la multiplicacion es: "+ multi )
+        } else if(numero1>numero2) {
+            dif = numero1 - numero2
+            multi = numero1 * numero2
+            document.write("Los numeros son diferentes: "+"<br>"+"la diferencia es: "+dif+"<br>"+"la multiplicacion es: "+ multi )
+        }else {
+            document.write("Los numeros son diferentes")
+        }
+
+    </script>
+</body>
+</html>

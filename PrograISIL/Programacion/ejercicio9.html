@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        Un tarbajdor en euna empresa tiene el siguiente beneficio:
+        Para los trabajadores que tengas mas de 3 años y menos
+    </pre>
+    <script>
+        let cant_años, hijos
+        let bono = 0
+        let bonificacion_total = 0
+
+        cant_años = parseInt(prompt("Ingrese la cantidad de años que tiene en la empresa: "))
+        hijos = prompt("Usted tiene hijos; SI , NO: ")
+
+        if (3<=cant_años<5) {
+            bono = 500
+        } else if (5<=cant_años<10) {
+            bono = 1000
+        } else if (cant_años>10) {
+            bono = 2000
+        }
+            
+        if (hijos == "SI") {
+            escol = 2000
+        } else {
+            escol = 0
+        }
+        
+        bonificacion_total = bono + escol
+        
+        document.write("Su bonificacion es de: " + bonificacion_total)
+
+    </script>
+</body>
+</html>
