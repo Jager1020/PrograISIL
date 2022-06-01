@@ -16,7 +16,15 @@
         5.“Cadena 1”
     </pre>
     <script>
-        
+        let texto, cadena
+
+        cadena = ""
+
+        for (var i = 1; i <= 5; i++) {
+          texto = prompt(i + ". Ingrese un texto: ")
+          cadena = cadena + i + "." +"'"+ texto +"'"+ "<br>"
+        }
+        document.write(cadena)
     </script>
 </body>
 </html>

@@ -21,18 +21,26 @@
         (por que sólo son 6 letras)
     </pre>
     <script>
-        let nombre, num, largo
+        let nombre, num, largo, cadena, cont
         num = 0
         largo = 0
+        cont = 0
+        cadena = ""
 
         nombre = prompt("Ingrese el nombre: ")
         num = parseInt(prompt("Ingrese el numero: "))
         largo = parseInt(nombre.length)
+        cont = 0
+        largo =  largo + 1
 
-        for (var i = 0; i <= num; i++) {
+        for (var i = 1; i <= num; i++) {
           largo = largo - 1
-          document.write(largo)
+          cadena = cadena + nombre.slice(0,largo) + "<br>"
+          if (largo == 0) {
+            break
+          }
         }
+        document.write(cadena)
     </script>
 </body>
 </html>

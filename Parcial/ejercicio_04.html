@@ -8,29 +8,42 @@
 </head>
 <body>
     <pre>
-        4.Realiza un script al cual le ingreses un número y te muestre la serie el cuadrado del numero y el “cuadrado perfecto de pares”. Si ingresas 7 te mostrará: (5 puntos)
-        1	     1		1		  1
-        2	     4		4		  10
-        3	     9		16		28
-        4	     16		36		56
-        5	     25	  64		94
-        6      36	  100		142
-        7	     49   144		202
-        8      64   196		268
+      4.Realiza un script al cual le ingreses un número y te muestre la serie el cuadrado del numero y el “cuadrado perfecto de pares”. Si ingresas 7 te mostrará: (5 puntos)
+      1	     1		1		1
+      2	     4		4		10
+      3	     9		16		28
+      4	     16		36		56
+      5	     25	       64		94
+      6      36	       100		142
+      7	     49         144		202
+      8      64        196		268
     </pre>
     <script>
 
-        let num, cuadrado, cadena
+        let num, cuadrado, cadena, n_c, cuadrado_pfc, suma
 
         cadena = ""
         num = 0
         cuadrado = 0
+        cuadrado_pfc = 0
+        n_c = -2
+        suma = 0
 
         num = parseInt(prompt("Ingrese un numero"))
 
         for (var i = 1; i <= num; i++) {
           cuadrado=Math.pow(i,2)
-          cadena = cadena +i+"    "+ cuadrado + "<br>"
+          n_c = n_c + 2
+          cuadrado_pfc = Math.pow(n_c,2)
+          suma = i + cuadrado + cuadrado_pfc
+
+          //De esta manera hago que la primera fila salga 1 1 1 1
+          //si se obvia esta parte se segiria la logica completa
+          if (n_c == 0) {
+            cuadrado_pfc = 1
+            suma = 1
+          }
+          cadena = cadena +i+"      "+ cuadrado +"      "+ cuadrado_pfc + "      " + suma + "<br>"
         }
         document.write(cadena)
 

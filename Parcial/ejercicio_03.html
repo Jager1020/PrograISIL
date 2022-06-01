@@ -21,7 +21,19 @@
         Alfredo
     </pre>
     <script>
-        
+        let cadena, nombre, largo
+
+        largo = 0
+        cadena = ""
+
+        nombre = prompt("Dame un nombre: ")
+
+        largo = parseInt(nombre.length)
+
+        for (var i = 0; i <= largo; i++) {
+            cadena = cadena + nombre.slice(0,i) + "<br>"
+        }
+        document.write(cadena)
     </script>
 </body>
 </html>
